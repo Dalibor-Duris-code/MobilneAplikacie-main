@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Find your recipe
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="welcome-card">
+  <ion-card-content>
+  <!-- Input with placeholder -->
+  <ion-input [(ngModel)]="myinput" placeholder="Search ... "></ion-input>
+  <ion-button (click)="btnSearchClicked()" expand="block">Search</ion-button>
+  </ion-card-content>
+  </ion-card>
+  <ion-card class="welcome-card">
+    <ion-card-content>
+     <strong>Recipe:</strong> <p> {{ myoutput }} </p>
+    </ion-card-content>
+    <ion-card-content>
+       <strong>Time to prepare:</strong> <p>{{ myTime }} minutes </p>
+    </ion-card-content>
+    <ion-card-content>
+      <ion-img height="20" src="https://spoonacular.com/recipeImages/{{ myphoto }}"></ion-img>
+    </ion-card-content>
+    <ion-card-content>
+      <strong>Recipe URL: </strong> <a href="{{ myurl }}">{{ myurl }}</a>
+    </ion-card-content>
+  </ion-card>
+  </ion-content>
